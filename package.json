@@ -1,6 +1,6 @@
 {
   "name": "minio-import",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "Resolving vite does not support the introduction of require into minio-js/解决vite不支持require引入minio-js",
   "main": "./dist/Minio.min.js",
   "scripts": {
@@ -15,7 +15,6 @@
     "node": ">= 4"
   },
   "license": "Apache-2.0",
- 
   "homepage": "https://github.com/minio/minio-js#readme",
   "dependencies": {
     "async": "^3.1.0",
@@ -31,10 +30,9 @@
     "xml": "^1.0.0",
     "xml2js": "^0.4.15"
   },
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "keywords": [
-	  "vite",
+    "vite",
     "import",
     "amazon",
     "minio",
