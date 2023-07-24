@@ -1,6 +1,6 @@
 {
   "name": "minio-import",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Resolving vite does not support the introduction of require into minio-js/解决vite不支持require引入minio-js",
   "main": "./dist/Minio.min.js",
   "scripts": {
