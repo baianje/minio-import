@@ -1,27 +1,19 @@
-# 适用于Amazon S3兼容云存储的Minio JavaScript Library [![Slack](https://slack.min.io/slack?type=svg)](https://slack.min.io)
 
-[![NPM](https://nodei.co/npm/minio.png)](https://nodei.co/npm/minio/)
-
-MinIO JavaScript Client SDK提供简单的API来访问任何Amazon S3兼容的对象存储服务。
-
-本快速入门指南将向您展示如何安装客户端SDK并执行示例JavaScript程序。有关API和示例的完整列表，请参阅[JavaScript客户端API参考](https://docs.min.io/docs/javascript-client-api-reference)文档。
-
-本文假设你已经安装了[nodejs](http://nodejs.org/) 。
 
 ## 使用NPM下载
 
 ```sh
-npm install --save minio
+npm install --save minio-import
 ```
 
-## 下载并安装源码
+
+
+## 使用 TypeScript
 
 ```sh
-git clone https://github.com/minio/minio-js
-cd minio-js
-npm install
-npm install -g
+npm install --save-dev @types/minio
 ```
+
 
 ## 初使化Minio Client
 
@@ -34,6 +26,7 @@ npm install -g
 | accessKey | Access key是唯一标识你的账户的用户ID。  |
 | secretKey	| Secret key是你账户的密码。   |
 |useSSL |true代表使用HTTPS |
+
 
 
 ```js
