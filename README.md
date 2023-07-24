@@ -8,12 +8,6 @@ npm install --save minio-import
 
 
 
-## Using with TypeScript
-
-```sh
-npm install --save-dev @types/minio
-```
-
 ## Initialize MinIO Client
 
 You need five items in order to connect to MinIO object storage server.
@@ -29,7 +23,7 @@ You need five items in order to connect to MinIO object storage server.
 
 
 ```js
-import Minio from 'minio-import'
+import {Minio,Stream} from 'minio-import'
 
 var minioClient = new Minio.Client({
     endPoint: 'play.min.io',
