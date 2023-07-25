@@ -23,7 +23,7 @@ You need five items in order to connect to MinIO object storage server.
 
 
 ```js
-import {Minio,Stream} from 'minio-import'
+import {Minio,Stream,Buffer} from 'minio-import'
 
 var minioClient = new Minio.Client({
     endPoint: 'play.min.io',
@@ -32,5 +32,27 @@ var minioClient = new Minio.Client({
     accessKey: 'Q3AM3UQ867SPQQA43P2F',
     secretKey: 'zuf+tfteSlswRu7BJ86wekitnifILbZam1KYY3TG'
 });
+/**
+ * @params {file} 文件对象
+ * @params {objeckKey} 在minio服务器上的存上路径
+ *//
+const handleUpload = (file, objectKey: string): any => {
+  return new Promise<void>((resolve, reject): any => {
+    // 将文件转换为minio可接收的格式
+    const reader = new FileReader()
+    reader.readAsArrayBuffer(file)
+    reader.onloadend = (e: any) => {
+      const bufferStream = new Stream.PassThrough()
+      bufferStream.end(Buffer.from(e.target.result))
+      minioClient.putObject(bucketName, objectKey, bufferStream, file.size, (err, etag) => {
+        if (err) {
+          reject(0)
+        } else {
+          resolve(etag)
+        }
+      })
+    }
+  })
+}
 ```
 
